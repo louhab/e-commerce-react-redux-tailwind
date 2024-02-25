@@ -5,9 +5,8 @@ COPY package.json .
 RUN npm install -g pnpm
 RUN touch .npmrc
 RUN pnpm install 
-RUN pnpm start
+RUN pnpm run build 
 COPY . .
-RUN npm run build
 
 
 
