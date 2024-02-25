@@ -14,5 +14,4 @@ jobs:
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker Image
-        run: docker build -t e-commerce-react-redux-tailwind .
-      - name: Publish image to docker hub
+        run: docker build -t e-commerce-react-redux-tailwind .  
