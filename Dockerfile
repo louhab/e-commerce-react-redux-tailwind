@@ -2,9 +2,10 @@
 FROM node:alpine3.18 as build
 WORKDIR /app 
 COPY package.json .
-RUN npm install
+RUN touch .npmrc
+RUN pnpm install
+RUN pnpm start
 COPY . .
-RUN npm run build
 
 # Step 2: Server With Nginx
 FROM nginx:1.23-alpine
