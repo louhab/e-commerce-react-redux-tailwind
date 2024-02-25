@@ -16,7 +16,7 @@ jobs:
       - name: Build Docker Image
         run: docker build -t louhab/e-commerce-react-redux-tailwind .
       - name: Publish image to docker hub
-        run: docker push e-louhab-react-redux-tailwind:latest   
+        run: docker push louhab/e-commerce-react-redux-tailwind:latest   
 
   deploy: 
     needs: build
